@@ -20,3 +20,8 @@
 - **Changes Made**: Appended a new entry to JOURNAL.md; no code changes besides journaling.
 - **Context and Reasons for Changes**: Read .github/copilot-instructions.md and invoked the journal-logger workflow to ensure required per-prompt logging compliance.
 
+
+### **New Interaction**
+- **Hook Version**: 1.02
+- **Date**: 23-03-2026 12:05
+- **Prompt**: I would like to visualize the sorting as it is happening. First i would like to explore a terminal based approach. what do you suggest ?
