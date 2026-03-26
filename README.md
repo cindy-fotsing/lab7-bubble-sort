@@ -1,54 +1,56 @@
 # lab-7-bubble-sort
 
-A small Python project that implements Bubble Sort with optional in-place behavior and basic automated tests using `pytest`.
+Python Bubble Sort project with two modes:
+
+- a classic function for normal sorting usage
+- an in-place terminal redraw mode to visualize sorting as an animation
 
 ## Features
 
-- Bubble Sort implementation in `main.py`
-- Optional input mutation with `in_place=True` (default)
-- Non-mutating mode with `in_place=False`
-- Early-stop optimization when the list is already sorted
-- Basic unit tests in `tests/test_main.py`
+- `bubble_sort(arr, in_place=True)` for regular sorting
+- `bubble_sort_in_place_redraw(arr)` for terminal animation
+- early-stop optimization when the list is already sorted
+- terminal-width-aware ASCII bars
+- basic `pytest` test suite
 
 ## Project Structure
 
-- `main.py`: Bubble Sort implementation and a simple runnable example
-- `tests/test_main.py`: Unit tests for sorting and behavior checks
-- `requirements.txt`: Project dependency list (`pytest`)
-- `REPORT.md`: Project report template
-- `JOURNAL.md`: Chronological interaction log
+- `main.py`: sorting logic + terminal visualization
+- `tests/test_main.py`: unit tests for core bubble sort behavior
+- `requirements.txt`: dependency list (`pytest`)
+- `README.md`: project documentation
+- `REPORT.md`: report template
+- `JOURNAL.md`: chronological interaction log
 
 ## Requirements
 
 - Python 3.10+
 - `pip`
 
-## Installation
-
-1. Create and activate a virtual environment (recommended):
+## Setup
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-```
-
-2. Install dependencies:
-
-```powershell
 pip install -r requirements.txt
 ```
 
-## Run the App
+## Usage
+
+Run the terminal visualization demo:
 
 ```powershell
 python main.py
 ```
 
-Expected output format:
+Use classic bubble sort in code:
 
-```text
-Original: [4, 1, 3, 10, 5, 16, 2]
-Sorted:   [1, 2, 3, 4, 5, 10, 16]
+```python
+from main import bubble_sort
+
+data = [4, 1, 3, 10, 5, 16, 2]
+result = bubble_sort(data, in_place=False)
+print(result)
 ```
 
 ## Run Tests
@@ -57,28 +59,15 @@ Sorted:   [1, 2, 3, 4, 5, 10, 16]
 python -m pytest -q
 ```
 
-Current tests cover:
+Current tests validate:
 
-- Correct sorting of a typical list
-- Handling duplicates
-- In-place mutation behavior
-- Non in-place behavior (input remains unchanged)
-- Error behavior for non-comparable values
-
-## API
-
-```python
-def bubble_sort(arr: list, in_place: bool = True) -> list:
-    """Sort a list using bubble sort.
-
-    Args:
-        arr: List of comparable elements.
-        in_place: If True, sort and return the same list.
-                  If False, return a sorted copy.
-    """
-```
+- correct numeric sorting
+- duplicate handling
+- in-place mutation behavior
+- non in-place behavior
+- TypeError on non-comparable values
 
 ## Notes
 
-- Bubble Sort has time complexity $O(n^2)$ in average and worst cases.
-- This project is for learning and testing algorithm behavior, not large-scale production sorting.
+- Bubble Sort time complexity is $O(n^2)$ in average and worst cases.
+- The terminal animation uses ANSI escape sequences and includes a best-effort Windows ANSI enable step.
