@@ -56,3 +56,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 15:59
 - **Prompt**: Append a new entry to JOURNAL.md for this prompt: "I am interested in the In-place redraw option. Help me implement this. Create the stubs and todos in main.py."  Requirements: - Use the repository's required journal template from .github/agents/journal-logger.agent.md. - Timestamp with current date 2026-03-26. - Summarize edits in main.py: created in-place redraw scaffold with stubs/TODOs (setup_terminal_animation, teardown_terminal_animation, draw_compare_frame, draw_swap_frame, draw_done_frame, redraw_header, render_bars, scaled_width) and a bubble_sort_in_place_redraw flow using these hooks. - Mention that syntax/errors check reported no errors. - Keep append-only chronological order and consistent formatting.  Return a concise summary of appended entry.
 
+### 26-03-2026 16:12
+- **Prompt**: can you check what i did. i don't really understand
+
