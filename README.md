@@ -11,13 +11,14 @@ Python Bubble Sort project with two modes:
 - `bubble_sort_in_place_redraw(arr)` for terminal animation
 - early-stop optimization when the list is already sorted
 - terminal-width-aware ASCII bars
+- `pygame` dependency installed in the local virtual environment for upcoming 2D visualization work
 - basic `pytest` test suite
 
 ## Project Structure
 
 - `main.py`: sorting logic + terminal visualization
 - `tests/test_main.py`: unit tests for core bubble sort behavior
-- `requirements.txt`: dependency list (`pytest`)
+- `requirements.txt`: dependency list (`pygame`, `pytest`)
 - `README.md`: project documentation
 - `REPORT.md`: report template
 - `JOURNAL.md`: chronological interaction log
@@ -35,12 +36,29 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+Alternative (without activating the environment):
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+This project depends on:
+
+- `pygame` for graphics-based visualization support
+- `pytest` for tests
+
 ## Usage
 
 Run the terminal visualization demo:
 
 ```powershell
 python main.py
+```
+
+If you have multiple Python installations, prefer:
+
+```powershell
+.\.venv\Scripts\python.exe main.py
 ```
 
 Use classic bubble sort in code:
