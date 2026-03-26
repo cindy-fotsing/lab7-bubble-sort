@@ -76,4 +76,8 @@ coverage/
 # Misc
 tmp/
 temp/
+*.log
+.cache/
+__pypackages__/
+.python-version
 
